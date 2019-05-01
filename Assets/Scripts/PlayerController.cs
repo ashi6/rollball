@@ -43,17 +43,12 @@ public class PlayerController : MonoBehaviour
              count++;
              SetCountText();
         }
-        if (other.gameObject.CompareTag("bounce"))
-        {
-            rb.AddForce(new Vector3(0, 0, 10.0f));
-            count ++;
-        }
     }
 
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count >= 8)
+        if (count >= 9)
         {
             winText.text = "You Win!";
         }
